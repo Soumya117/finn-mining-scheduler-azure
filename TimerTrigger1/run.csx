@@ -29,8 +29,8 @@ public static async void GetStringAsync(ILogger log, string url, string path)
 
 public static void CheckFinn(ILogger log, ExecutionContext context)
 {
-   GetStringAsync(log, "https://finn-mining.azurewebsites.net/links", context.FunctionDirectory);
-   GetStringAsync(log, "https://finn-mining.azurewebsites.net/price", context.FunctionDirectory);
+   GetStringAsync(log, "https://finn-mining.azurewebsites.net/links?scan=yes", context.FunctionDirectory);
+   GetStringAsync(log, "https://finn-mining.azurewebsites.net/price?scan=yes", context.FunctionDirectory);
 }
 
 public static void Run(TimerInfo myTimer, ILogger log, ExecutionContext context)
